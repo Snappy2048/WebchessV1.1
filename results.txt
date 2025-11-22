@@ -1,0 +1,6 @@
+Game ended at 2025-11-22 16:02:19.019834
+Player: s
+Difficulty: medium
+Result: White wins (1-0)
+Final FEN: 6R1/P7/8/2PP3k/4K3/P7/7R/1NB2B2 b - - 13 54
+--------------------------------------------------

@@ -1,0 +1,132 @@
+/* General page styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f6f1eb;
+    margin: 0;
+    padding: 20px 0 40px;
+    text-align: center;
+}
+
+h1 {
+    margin: 0 0 15px 0;
+}
+
+/* Top controls bar */
+#controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+#controls input,
+#controls button,
+#controls select {
+    padding: 6px 10px;
+    font-size: 15px;
+}
+
+#playerName {
+    min-width: 180px;
+}
+
+/* Main container: board + log */
+#gameContainer {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Board wrapper: the outer box */
+#boardWrapper {
+    width: 640px;
+    height: 640px;
+    border: 4px solid #333;
+    box-sizing: border-box;
+    background-color: #f6f1eb;
+}
+
+/* Board fills the wrapper */
+#board {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+    box-sizing: border-box;
+}
+
+/* Individual squares */
+.square {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+.light {
+    background-color: #f0d9b5;
+}
+
+.dark {
+    background-color: #b58863;
+}
+
+/* Move dots */
+.dot {
+    width: 15px;
+    height: 15px;
+    background-color: rgba(0, 0, 0, 0.25);
+    border-radius: 50%;
+}
+
+/* Sidebar game log */
+#logBox {
+    width: 320px;
+    height: 640px;
+    border: 3px solid #333;
+    background-color: #ffffff;
+    box-sizing: border-box;
+    padding: 10px;
+    text-align: left;
+    overflow-y: auto;
+    font-family: "Courier New", monospace;
+    font-size: 14px;
+}
+
+#logTitle {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 8px;
+    border-bottom: 2px solid #333;
+    padding-bottom: 4px;
+}
+
+#logContent {
+    white-space: pre-wrap;
+    margin: 0;
+}
+
+/* Responsive: stack board and log on small screens */
+@media (max-width: 1100px) {
+    #gameContainer {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    #logBox {
+        width: 90%;
+        max-width: 640px;
+        height: 260px;
+    }
+}

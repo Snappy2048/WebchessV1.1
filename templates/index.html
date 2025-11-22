@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Web Chess</title>
+    <link rel="stylesheet" href="/static/style.css" />
+</head>
+
+<body>
+    <h1>♟ Web Chess</h1>
+
+    <!-- Top controls -->
+    <div id="controls">
+        <label for="playerName"><strong>Your Name:</strong></label>
+        <input id="playerName" type="text" placeholder="Enter your name" />
+
+        <button id="startBtn">Start Game</button>
+        <button id="endBtn">End Game</button>
+
+        <label for="difficulty"><strong>Difficulty:</strong></label>
+        <select id="difficulty">
+            <option value="easy">Easy</option>
+            <option value="medium" selected>Medium</option>
+            <option value="hard">Hard</option>
+        </select>
+    </div>
+
+    <!-- Main layout: board on left, log on right -->
+    <div id="gameContainer">
+        <!-- Board wrapper – fixed square box -->
+        <div id="boardWrapper">
+            <div id="board"></div>
+        </div>
+
+        <!-- Sidebar log -->
+        <div id="logBox">
+            <div id="logTitle">Game Log</div>
+            <pre id="logContent">No games yet.</pre>
+        </div>
+    </div>
+
+    <script src="/static/app.js"></script>
+</body>
+</html>
